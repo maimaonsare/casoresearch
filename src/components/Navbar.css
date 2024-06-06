@@ -1,0 +1,120 @@
+.nav_barr {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.2rem;
+	padding: 0 30px;
+	background-color: rgb(234, 244, 252);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+	width: 95%;
+	height: 85px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 99;
+}
+.caso_logo {
+	color: aliceblue;
+	justify-self: start;
+	cursor: pointer;
+}
+.caso_logo img{
+	width: 200px;
+}
+.nav_menu {
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+	grid-gap: 15px;
+	list-style: none;
+	align-items: center;
+	text-align: center;
+	justify-content: end;
+}
+.nav_menu a {
+	text-decoration: none;
+}
+.nav_links {
+	color: #e50a0a;
+	font-size: 1.2rem;
+	padding: 0.7rem 1rem;
+	white-space: nowrap;
+}
+.nav_links:hover {
+	background: #003471;
+	border-radius: 4px;
+	transition: all 0.2s ease-in-out;
+	color: #fff;
+}
+.menu-icon i {
+	color: #e50a0a;
+	font-size: 2.5rem;
+}
+.menu-icon {
+	display: none;
+}
+
+.nav_links_mobile {
+	padding: 0.5rem 1rem;
+	white-space: nowrap;
+	background-color: #02014d;
+	border-radius: 3px;
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #fff;
+}
+.nav_links_mobile:hover {
+	color: rgb(246, 194, 4);
+}
+
+@media screen and (max-width: 850px) {
+	.nav_menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background: rgba(54, 53, 52, 0.25);
+		box-shadow: 0 8px 32px 0 rgba(244, 203, 2, 0.37);
+		backdrop-filter: blur(4px);
+		border-radius: 8px;
+		width: 60%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		right: -100%;
+		align-items: stretch;
+		padding: 80px 0 30px 0;
+		margin: 0;
+		z-index: -1;
+		transition: all 0.3s ease-in-out;
+	}
+	.nav_menu.active {
+		right: 0%;
+	}
+	.nav_links {
+		display: block;
+		widows: 100%;
+		padding: 0.7rem 0;
+		color: rgb(248, 154, 3);
+		font-weight: 700;
+	}
+	.nav_links:hover {
+		background: rgba(245, 165, 4, 0.653);
+		backdrop-filter: blur(20px);
+	}
+	.menu-icon {
+		display: block;
+
+	}
+	.nav_links_mobile {
+		padding: 1.1rem;
+		display: block;
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: bold;
+		width: 80%;
+		margin: auto;
+	}
+}
